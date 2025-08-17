@@ -4,21 +4,47 @@
   "data": {
     "type": "page",
     "name": "page",
-    "title": "用户管理",
+    "title": "Amis",
     "data": {
       "selectedUserId": null
     },
     "body": [
       {
-        "type": "service",
-        "schemaApi": "/api/list-schema.json",
-        "api": "/api/users.json"
-      },
-      {
-        "type": "service",
-        "schemaApi": "/api/detail-schema.json",
-        "api": "/api/user-detail-${selectedUserId}.json",
-        "visibleOn": "${selectedUserId}"
+        "type": "tabs",
+        "tabs": [
+          {
+            "title": "用户列表",
+            "body": [
+              {
+                "type": "service",
+                "schemaApi": "/api/list-schema.json",
+                "api": "/api/users.json"
+              },
+              {
+                "type": "service",
+                "schemaApi": "/api/detail-schema.json",
+                "api": "/api/user-detail-${selectedUserId}.json",
+                "visibleOn": "${selectedUserId}"
+              }
+            ]
+          },
+          {
+            "title": "自定义组件",
+            "body": [
+              {
+                "type": "service",
+                "schemaApi": "/api/custom-table-schema.json",
+                "api": "/api/users.json"
+              },
+              {
+                "type": "service",
+                "schemaApi": "/api/detail-schema.json",
+                "api": "/api/user-detail-${selectedUserId}.json",
+                "visibleOn": "${selectedUserId}"
+              }
+            ]
+          }
+        ]
       }
     ]
   }

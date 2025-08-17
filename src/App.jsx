@@ -1,6 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { render as renderAmis } from 'amis';
+import { render as renderAmis, Renderer } from 'amis';
+import CustomTable from './components/CustomTable';
+import 'antd/dist/reset.css';
 import './App.css';
+
+// 注册自定义组件
+@Renderer({
+  type: 'custom-table'
+})
+class CustomTableRenderer extends React.Component {
+  render() {
+    return <CustomTable {...this.props} />;
+  }
+}
 
 function App() {
   const [pageSchema, setPageSchema] = useState(null);
