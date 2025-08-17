@@ -1,0 +1,39 @@
+{
+  "status": 0,
+  "msg": "success",
+  "data": {
+    "type": "crud",
+    "columns": [
+      { "name": "id", "label": "ID" },
+      { "name": "name", "label": "姓名" },
+      { "name": "email", "label": "邮箱" },
+      { "name": "department", "label": "部门" },
+      {
+        "type": "operation",
+        "label": "操作",
+        "buttons": [
+          {
+            "label": "查看详情",
+            "type": "button",
+            "level": "link",
+            "onEvent": {
+              "click": {
+                "actions": [
+                  {
+                    "actionType": "setValue",
+                    "componentName": "page",
+                    "args": {
+                      "value": {
+                        "selectedUserId": "${id}"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

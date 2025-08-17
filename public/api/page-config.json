@@ -10,40 +10,9 @@
     },
     "body": [
       {
-        "type": "crud",
-        "api": "/api/users.json",
-        "columns": [
-          { "name": "id", "label": "ID" },
-          { "name": "name", "label": "姓名" },
-          { "name": "email", "label": "邮箱" },
-          { "name": "department", "label": "部门" },
-          {
-            "type": "operation",
-            "label": "操作",
-            "buttons": [
-              {
-                "label": "查看详情",
-                "type": "button",
-                "level": "link",
-                "onEvent": {
-                  "click": {
-                    "actions": [
-                      {
-                        "actionType": "setValue",
-                        "componentName": "page",
-                        "args": {
-                          "value": {
-                            "selectedUserId": "${id}"
-                          }
-                        }
-                      }
-                    ]
-                  }
-                }
-              }
-            ]
-          }
-        ]
+        "type": "service",
+        "schemaApi": "/api/list-schema.json",
+        "api": "/api/users.json"
       },
       {
         "type": "service",
