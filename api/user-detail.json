@@ -1,0 +1,273 @@
+{
+  "status": 0,
+  "msg": "获取详情成功",
+  "data": {
+    "detailSchema": [
+      {
+        "type": "tabs",
+        "tabs": [
+          {
+            "title": "基本信息",
+            "body": [
+              {
+                "type": "service",
+                "api": {
+                  "method": "get",
+                  "url": "./api/user-basic.json",
+                  "data": {
+                    "id": "${id}"
+                  }
+                },
+                "body": [
+                  {
+                    "type": "panel",
+                    "title": "个人资料",
+                    "body": [
+                      {
+                        "type": "grid",
+                        "columns": [
+                          {
+                            "md": 3,
+                            "body": [
+                              {
+                                "type": "image",
+                                "src": "${avatar}",
+                                "className": "w-full",
+                                "style": {
+                                  "borderRadius": "8px"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "md": 9,
+                            "body": [
+                              {
+                                "type": "descriptions",
+                                "column": 2,
+                                "items": [
+                                  {
+                                    "label": "姓名",
+                                    "content": "${name}"
+                                  },
+                                  {
+                                    "label": "邮箱",
+                                    "content": "${email}"
+                                  },
+                                  {
+                                    "label": "手机号",
+                                    "content": "${phone}"
+                                  },
+                                  {
+                                    "label": "职位",
+                                    "content": "${position}"
+                                  },
+                                  {
+                                    "label": "部门",
+                                    "content": "${department}"
+                                  },
+                                  {
+                                    "label": "状态",
+                                    "content": "${status}"
+                                  },
+                                  {
+                                    "label": "入职时间",
+                                    "content": "${createTime}"
+                                  },
+                                  {
+                                    "label": "薪资",
+                                    "content": "¥${salary}"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "项目经历",
+            "body": [
+              {
+                "type": "service",
+                "api": {
+                  "method": "get",
+                  "url": "./api/user-projects.json",
+                  "data": {
+                    "id": "${id}"
+                  }
+                },
+                "body": [
+                  {
+                    "type": "panel",
+                    "title": "参与项目",
+                    "body": [
+                      {
+                        "type": "table",
+                        "source": "${projects}",
+                        "columns": [
+                          {
+                            "name": "name",
+                            "label": "项目名称"
+                          },
+                          {
+                            "name": "role",
+                            "label": "担任角色"
+                          },
+                          {
+                            "name": "startTime",
+                            "label": "开始时间",
+                            "type": "date"
+                          },
+                          {
+                            "name": "endTime",
+                            "label": "结束时间",
+                            "type": "date"
+                          },
+                          {
+                            "name": "status",
+                            "label": "状态",
+                            "type": "mapping",
+                            "map": {
+                              "ongoing": "<span class='label label-info'>进行中</span>",
+                              "completed": "<span class='label label-success'>已完成</span>",
+                              "paused": "<span class='label label-warning'>已暂停</span>"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "绩效统计",
+            "body": [
+              {
+                "type": "service",
+                "api": {
+                  "method": "get",
+                  "url": "./api/user-performance.json",
+                  "data": {
+                    "id": "${id}"
+                  }
+                },
+                "body": [
+                  {
+                    "type": "grid",
+                    "columns": [
+                      {
+                        "md": 6,
+                        "body": [
+                          {
+                            "type": "panel",
+                            "title": "月度绩效趋势",
+                            "body": [
+                              {
+                                "type": "chart",
+                                "api": {
+                                  "method": "get",
+                                  "url": "data:application/json,{\"data\":[{\"month\":\"1月\",\"score\":85},{\"month\":\"2月\",\"score\":88},{\"month\":\"3月\",\"score\":92},{\"month\":\"4月\",\"score\":87},{\"month\":\"5月\",\"score\":90},{\"month\":\"6月\",\"score\":94}]}"
+                                },
+                                "config": {
+                                  "type": "line",
+                                  "x": "month",
+                                  "y": "score",
+                                  "smooth": true
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "md": 6,
+                        "body": [
+                          {
+                            "type": "panel",
+                            "title": "关键指标",
+                            "body": [
+                              {
+                                "type": "grid",
+                                "columns": [
+                                  {
+                                    "md": 6,
+                                    "body": [
+                                      {
+                                        "type": "card",
+                                        "header": {
+                                          "title": "平均绩效",
+                                          "subTitle": "近6个月"
+                                        },
+                                        "body": [
+                                          {
+                                            "type": "tpl",
+                                            "tpl": "<div style='text-align: center; font-size: 32px; font-weight: bold; color: #28a745;'>${avgScore}</div>"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "md": 6,
+                                    "body": [
+                                      {
+                                        "type": "card",
+                                        "header": {
+                                          "title": "完成项目",
+                                          "subTitle": "今年累计"
+                                        },
+                                        "body": [
+                                          {
+                                            "type": "tpl",
+                                            "tpl": "<div style='text-align: center; font-size: 32px; font-weight: bold; color: #007bff;'>${completedProjects}</div>"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "divider"
+                              },
+                              {
+                                "type": "descriptions",
+                                "column": 1,
+                                "items": [
+                                  {
+                                    "label": "出勤率",
+                                    "content": "${attendance}%"
+                                  },
+                                  {
+                                    "label": "客户满意度",
+                                    "content": "${satisfaction}/5.0"
+                                  },
+                                  {
+                                    "label": "团队协作",
+                                    "content": "${teamwork}/5.0"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

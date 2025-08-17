@@ -1,0 +1,19 @@
+{
+  "status": 0,
+  "msg": "获取绩效信息成功",
+  "data": {
+    "avgScore": 89.3,
+    "completedProjects": 12,
+    "attendance": 96.5,
+    "satisfaction": 4.8,
+    "teamwork": 4.6,
+    "monthlyScores": [
+      {"month": "1月", "score": 85},
+      {"month": "2月", "score": 88},
+      {"month": "3月", "score": 92},
+      {"month": "4月", "score": 87},
+      {"month": "5月", "score": 90},
+      {"month": "6月", "score": 94}
+    ]
+  }
+}

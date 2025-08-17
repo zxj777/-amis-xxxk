@@ -1,0 +1,107 @@
+{
+  "status": 0,
+  "msg": "获取成功",
+  "data": {
+    "items": [
+      {
+        "id": 1,
+        "name": "张三",
+        "email": "zhangsan@example.com",
+        "avatar": "https://picsum.photos/60/60?random=1",
+        "department": "tech",
+        "status": "active",
+        "phone": "13800138001",
+        "position": "前端开发工程师",
+        "createTime": "2023-01-15",
+        "salary": "15000"
+      },
+      {
+        "id": 2,
+        "name": "李四",
+        "email": "lisi@example.com",
+        "avatar": "https://picsum.photos/60/60?random=2",
+        "department": "sales",
+        "status": "active",
+        "phone": "13800138002",
+        "position": "销售经理",
+        "createTime": "2023-03-20",
+        "salary": "12000"
+      },
+      {
+        "id": 3,
+        "name": "王五",
+        "email": "wangwu@example.com",
+        "avatar": "https://picsum.photos/60/60?random=3",
+        "department": "marketing",
+        "status": "trial",
+        "phone": "13800138003",
+        "position": "市场专员",
+        "createTime": "2023-11-10",
+        "salary": "8000"
+      },
+      {
+        "id": 4,
+        "name": "赵六",
+        "email": "zhaoliu@example.com",
+        "avatar": "https://picsum.photos/60/60?random=4",
+        "department": "hr",
+        "status": "active",
+        "phone": "13800138004",
+        "position": "人事专员",
+        "createTime": "2023-05-08",
+        "salary": "9000"
+      },
+      {
+        "id": 5,
+        "name": "孙七",
+        "email": "sunqi@example.com",
+        "avatar": "https://picsum.photos/60/60?random=5",
+        "department": "tech",
+        "status": "inactive",
+        "phone": "13800138005",
+        "position": "后端开发工程师",
+        "createTime": "2022-08-12",
+        "salary": "16000"
+      },
+      {
+        "id": 6,
+        "name": "周八",
+        "email": "zhouba@example.com",
+        "avatar": "https://picsum.photos/60/60?random=6",
+        "department": "sales",
+        "status": "active",
+        "phone": "13800138006",
+        "position": "销售代表",
+        "createTime": "2023-07-22",
+        "salary": "10000"
+      },
+      {
+        "id": 7,
+        "name": "吴九",
+        "email": "wujiu@example.com",
+        "avatar": "https://picsum.photos/60/60?random=7",
+        "department": "marketing",
+        "status": "active",
+        "phone": "13800138007",
+        "position": "品牌经理",
+        "createTime": "2023-02-14",
+        "salary": "14000"
+      },
+      {
+        "id": 8,
+        "name": "郑十",
+        "email": "zhengshi@example.com",
+        "avatar": "https://picsum.photos/60/60?random=8",
+        "department": "tech",
+        "status": "trial",
+        "phone": "13800138008",
+        "position": "UI设计师",
+        "createTime": "2024-01-08",
+        "salary": "11000"
+      }
+    ],
+    "total": 8,
+    "page": 1,
+    "perPage": 10
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "status": 0,
+  "msg": "获取基本信息成功",
+  "data": {
+    "id": 1,
+    "name": "张三",
+    "email": "zhangsan@example.com",
+    "avatar": "https://picsum.photos/200/200?random=1",
+    "department": "技术部",
+    "status": "在职",
+    "phone": "13800138001",
+    "position": "前端开发工程师",
+    "createTime": "2023-01-15",
+    "salary": "15000",
+    "address": "北京市朝阳区xxx大厦",
+    "education": "本科",
+    "experience": "3年"
+  }
+}

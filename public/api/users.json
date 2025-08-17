@@ -1,0 +1,27 @@
+{
+  "status": 0,
+  "msg": "success",
+  "data": {
+    "items": [
+      {
+        "id": 1,
+        "name": "张三",
+        "email": "zhangsan@example.com",
+        "department": "tech"
+      },
+      {
+        "id": 2,
+        "name": "李四",
+        "email": "lisi@example.com", 
+        "department": "sales"
+      },
+      {
+        "id": 3,
+        "name": "王五",
+        "email": "wangwu@example.com",
+        "department": "marketing"
+      }
+    ],
+    "total": 3
+  }
+}

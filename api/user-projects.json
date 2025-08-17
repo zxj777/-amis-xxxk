@@ -1,0 +1,36 @@
+{
+  "status": 0,
+  "msg": "获取项目信息成功",
+  "data": {
+    "projects": [
+      {
+        "name": "电商平台前端重构",
+        "role": "前端负责人",
+        "startTime": "2023-01-01",
+        "endTime": "2023-06-30",
+        "status": "completed"
+      },
+      {
+        "name": "移动端APP开发",
+        "role": "前端开发",
+        "startTime": "2023-07-01",
+        "endTime": "2023-12-31",
+        "status": "ongoing"
+      },
+      {
+        "name": "后台管理系统优化",
+        "role": "技术顾问",
+        "startTime": "2023-03-15",
+        "endTime": "2023-05-15",
+        "status": "completed"
+      },
+      {
+        "name": "微信小程序开发",
+        "role": "前端开发",
+        "startTime": "2023-09-01",
+        "endTime": "2023-11-30",
+        "status": "paused"
+      }
+    ]
+  }
+}
