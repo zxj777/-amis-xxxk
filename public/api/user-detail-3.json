@@ -2,77 +2,20 @@
   "status": 0,
   "msg": "success",
   "data": {
-    "detailSchema": [
-      {
-        "type": "panel",
-        "title": "📋 基本信息",
-        "className": "mb-3",
-        "body": [
-          {
-            "type": "descriptions",
-            "column": 2,
-            "items": [
-              { "label": "用户ID", "content": "${id}" },
-              { "label": "姓名", "content": "${name}" },
-              { "label": "邮箱", "content": "${email}" },
-              { "label": "部门", "content": "${department}" },
-              { "label": "职位", "content": "${position}" },
-              { "label": "入职时间", "content": "${joinDate}" }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "panel", 
-        "title": "📊 工作统计",
-        "className": "mb-3",
-        "body": [
-          {
-            "type": "cards",
-            "source": "${workStats}",
-            "className": "text-center",
-            "card": {
-              "body": [
-                {
-                  "type": "tpl",
-                  "className": "bg-light p-3 rounded",
-                  "tpl": "<h5 class='text-warning'>${value}</h5><small class='text-muted'>${label}</small>"
-                }
-              ]
-            }
-          }
-        ]
-      },
-      {
-        "type": "panel",
-        "title": "📞 联系信息", 
-        "body": [
-          {
-            "type": "descriptions",
-            "column": 1,
-            "items": [
-              { "label": "手机号码", "content": "${phone}" },
-              { "label": "办公地址", "content": "${address}" },
-              { "label": "紧急联系人", "content": "${emergencyContact}" }
-            ]
-          }
-        ]
-      }
-    ],
     "id": 3,
     "name": "王五",
     "email": "wangwu@example.com", 
-    "department": "设计部",
-    "position": "UI/UX设计师",
-    "joinDate": "2023-02-10",
-    "phone": "137-0016-2222",
-    "address": "北京市西城区设计中心C座8楼",
-    "emergencyContact": "赵六 (兄弟) - 136-0017-3333",
+    "department": "市场部",
+    "position": "市场专员",
+    "joinDate": "2023-01-10",
+    "phone": "138-0015-1111",
+    "address": "北京市西城区商务中心C座8楼",
+    "emergencyContact": "张三 (同事) - 138-0013-8888",
     "workStats": [
-      { "label": "设计稿", "value": "156个" },
-      { "label": "原型图", "value": "89个" },
-      { "label": "用户体验优化", "value": "67次" },
-      { "label": "设计评审", "value": "112次" }
+      { "label": "推广活动", "value": "28个" },
+      { "label": "文案撰写", "value": "156篇" },
+      { "label": "媒体合作", "value": "32家" },
+      { "label": "品牌曝光", "value": "890万" }
     ]
   }
 }

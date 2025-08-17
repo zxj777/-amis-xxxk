@@ -1,0 +1,56 @@
+{
+  "status": 0,
+  "msg": "success",
+  "data": {
+    "type": "page",
+    "name": "page",
+    "title": "用户管理",
+    "data": {
+      "selectedUserId": null
+    },
+    "body": [
+      {
+        "type": "crud",
+        "api": "/api/users.json",
+        "columns": [
+          { "name": "id", "label": "ID" },
+          { "name": "name", "label": "姓名" },
+          { "name": "email", "label": "邮箱" },
+          { "name": "department", "label": "部门" },
+          {
+            "type": "operation",
+            "label": "操作",
+            "buttons": [
+              {
+                "label": "查看详情",
+                "type": "button",
+                "level": "link",
+                "onEvent": {
+                  "click": {
+                    "actions": [
+                      {
+                        "actionType": "setValue",
+                        "componentName": "page",
+                        "args": {
+                          "value": {
+                            "selectedUserId": "${id}"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "service",
+        "schemaApi": "/api/detail-schema.json",
+        "api": "/api/user-detail-${selectedUserId}.json",
+        "visibleOn": "${selectedUserId}"
+      }
+    ]
+  }
+}

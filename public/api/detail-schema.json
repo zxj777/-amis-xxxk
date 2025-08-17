@@ -1,0 +1,128 @@
+{
+  "status": 0,
+  "msg": "success",
+  "data": {
+    "type": "container",
+    "style": {
+      "marginTop": "20px",
+      "border": "2px solid #007bff", 
+      "borderRadius": "8px",
+      "backgroundColor": "#f8f9ff"
+    },
+    "body": [
+      {
+        "type": "flex",
+        "justify": "space-between",
+        "alignItems": "center",
+        "style": {
+          "padding": "15px 20px",
+          "backgroundColor": "#007bff",
+          "color": "white",
+          "margin": "-1px -1px 20px -1px",
+          "borderRadius": "6px 6px 0 0"
+        },
+        "items": [
+          {
+            "type": "tpl",
+            "tpl": "👤 ${name} 的详情",
+            "style": {
+              "fontSize": "16px",
+              "fontWeight": "bold"
+            }
+          },
+          {
+            "type": "button",
+            "label": "✕ 关闭",
+            "level": "link",
+            "size": "sm",
+            "style": { "color": "white" },
+            "onEvent": {
+              "click": {
+                "actions": [
+                  {
+                    "actionType": "setValue",
+                    "args": {
+                      "value": {
+                        "selectedUserId": null,
+                        "showDetail": false
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "container",
+        "style": {
+          "padding": "0 20px 20px 20px"
+        },
+        "body": [
+          {
+            "type": "panel",
+            "title": "📋 基本信息",
+            "className": "mb-3",
+            "body": [
+              {
+                "type": "table",
+                "data": [
+                  { "field": "用户ID", "value": "${id}" },
+                  { "field": "姓名", "value": "${name}" },
+                  { "field": "邮箱", "value": "${email}" },
+                  { "field": "部门", "value": "${department}" },
+                  { "field": "职位", "value": "${position}" },
+                  { "field": "入职时间", "value": "${joinDate}" }
+                ],
+                "columns": [
+                  { "name": "field", "label": "字段" },
+                  { "name": "value", "label": "值" }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "panel", 
+            "title": "📊 工作统计",
+            "className": "mb-3",
+            "body": [
+              {
+                "type": "cards",
+                "source": "${workStats}",
+                "className": "text-center",
+                "card": {
+                  "body": [
+                    {
+                      "type": "tpl",
+                      "className": "bg-light p-3 rounded",
+                      "tpl": "<h5 class='text-primary'>${value}</h5><small class='text-muted'>${label}</small>"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "type": "panel",
+            "title": "📞 联系信息", 
+            "body": [
+              {
+                "type": "table",
+                "data": [
+                  { "field": "手机号码", "value": "${phone}" },
+                  { "field": "办公地址", "value": "${address}" },
+                  { "field": "紧急联系人", "value": "${emergencyContact}" }
+                ],
+                "columns": [
+                  { "name": "field", "label": "项目" },
+                  { "name": "value", "label": "详情" }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

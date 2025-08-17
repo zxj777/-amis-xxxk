@@ -1,0 +1,8 @@
+{
+  "status": 0,
+  "msg": "success",
+  "data": {
+    "selectedUserId": "${query.selectedUserId|default:''}",
+    "showDetail": "${query.showDetail|default:false}"
+  }
+}
